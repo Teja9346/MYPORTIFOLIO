@@ -2,94 +2,240 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dasari Saiteja | Python Developer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
-    header { background: #1e293b; padding: 3rem 1rem; text-align: center; }
-    header h1 { font-size: 2.5rem; color: #38bdf8; }
-    header p { font-size: 1.2rem; color: #94a3b8; }
-    section { padding: 2rem; max-width: 800px; margin: auto; }
-    h2 { color: #38bdf8; margin-bottom: 0.5rem; }
-    ul { padding-left: 1.5rem; }
-    ul li { margin-bottom: 0.5rem; }
-    footer { text-align: center; background: #1e293b; padding: 1rem; color: #64748b; }
-    a { color: #0ea5e9; text-decoration: none; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url('3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    nav ul li a {
+      color: #f43f5e;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #fb7185;
+    }
+
+    header {
+      padding-top: 6rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding-bottom: 3rem;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid #f43f5e;
+      object-fit: cover;
+      box-shadow: 0 0 25px #f43f5e;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #f43f5e;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #f1f5f9;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    h2 {
+      color: #f43f5e;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .project-image {
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem;
+      color: #f1f5f9;
+    }
+
+    a {
+      color: #f43f5e;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <header>
-    <h1>Dasari Saiteja</h1>
-    <p>Entry-Level Python Developer | Full Stack Enthusiast | Django & REST APIs</p>
+    <div class="hero">
+      <img src="profile.png" alt="Dasari Saiteja" class="profile-pic">
+      <h1>Dasari Saiteja</h1>
+      <p>Entry-Level Python Developer | Full Stack Enthusiast | Django & REST APIs</p>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Enthusiastic and detail-oriented Computer Science graduate with hands-on training in Python development, web technologies (HTML, CSS, JavaScript), and frameworks like Django and Flask. Completed multiple academic and personal projects including an AI-Powered Vulnerability Scanner and PG Life Web App. Skilled in building scalable web applications and RESTful APIs. Available immediately for full-time roles.</p>
-  </section>
+  <main>
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>Enthusiastic and detail-oriented Computer Science graduate with hands-on training in Python development, web technologies (HTML, CSS, JavaScript), and frameworks like Django and Flask. Completed multiple academic and personal projects including an AI-Powered Vulnerability Scanner and PG Life Web App. Skilled in building scalable web applications and RESTful APIs. Available immediately for full-time roles.</p>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Languages: Python, JavaScript, HTML5, CSS3, SQL</li>
-      <li>Frameworks: Django, Flask, React.js, Bootstrap</li>
-      <li>Databases: MySQL, PostgreSQL</li>
-      <li>Tools: Git, GitHub, Postman, VS Code, Heroku, Render</li>
-      <li>Concepts: REST APIs, MVC Architecture, OOP, JWT Auth, Responsive Design</li>
-      <li>Other: Agile, Remote collaboration, JSON, Linux basics</li>
-      <li>Soft Skills: Communication, Empathy, Teamwork, Problem-solving, Adaptability</li>
-    </ul>
-  </section>
+    <section id="skills" data-aos="fade-right">
+      <h2>Skills</h2>
+      <ul>
+        <li>Languages: Python, JavaScript, HTML5, CSS3, SQL</li>
+        <li>Frameworks: Django, Flask, React.js, Bootstrap</li>
+        <li>Databases: MySQL, PostgreSQL</li>
+        <li>Tools: Git, GitHub, Postman, VS Code, Heroku, Render</li>
+        <li>Concepts: REST APIs, MVC Architecture, OOP, JWT Auth, Responsive Design</li>
+        <li>Other: Agile, Remote collaboration, JSON, Linux basics</li>
+        <li>Soft Skills: Communication, Empathy, Teamwork, Problem-solving, Adaptability</li>
+      </ul>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>AI-Powered Vulnerability Scanner:</strong> Built a machine learning-based tool to detect SQLi, XSS, and CSRF in web applications. Used BeautifulSoup, Scikit-learn, and Python.</li>
-      <li><strong>PG Life Website:</strong> Hostel listing platform with login, search, and booking features using PHP, MySQL, Bootstrap, HTML & CSS.</li>
-      <li><strong>Music Player & Calculator:</strong> Developed during internship using Python.</li>
-      <li><strong>Analysis of Ransomware Encryption Techniques and Recovery Solutions:</strong> Investigated encryption algorithms (AES, RSA) used in ransomware like WannaCry, LockBit, and Ryuk. Developed detection scripts and evaluated data recovery strategies using the RanSAP dataset. Focused on decryption, backup planning, and incident response methods.</li>
-    </ul>
-  </section>
+    <section id="projects" data-aos="fade-left">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>AI-Powered Vulnerability Scanner:</strong> Built a machine learning-based tool to detect SQLi, XSS, and CSRF in web applications. Used BeautifulSoup, Scikit-learn, and Python.
+          <img src="images/ai-scanner.png" alt="AI Vulnerability Scanner" class="project-image">
+        </li>
+        <li>
+          <strong>PG Life Website:</strong> Hostel listing platform with login, search, and booking features using PHP, MySQL, Bootstrap, HTML & CSS.
+          <img src="images/pg-life.png" alt="PG Life Website" class="project-image">
+        </li>
+        <li>
+          <strong>Music Player & Calculator:</strong> Developed during internship using Python.
+          <img src="images/music-player.png" alt="Music Player" class="project-image">
+        </li>
+        <li>
+          <strong>Analysis of Ransomware Encryption Techniques and Recovery Solutions:</strong> Investigated encryption algorithms (AES, RSA) used in ransomware like WannaCry, LockBit, and Ryuk. Developed detection scripts and evaluated data recovery strategies using the RanSAP dataset. Focused on decryption, backup planning, and incident response methods.
+          <img src="images/ransomware-analysis.png" alt="Ransomware Analysis" class="project-image">
+        </li>
+      </ul>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>B.Tech in Computer Science – GITAM University, Bangalore (Grade: 8.04/10)</li>
-      <li>Intermediate – Sri Bhavishya Junior College, Vijayawada (93%)</li>
-      <li>SSC – Indus High School, Kurnool (9.8/10)</li>
-    </ul>
-  </section>
+    <section id="education" data-aos="fade-up">
+      <h2>Education</h2>
+      <ul>
+        <li>B.Tech in Computer Science – GITAM University, Bangalore (Grade: 8.04/10)</li>
+        <li>Intermediate – Sri Bhavishya Junior College, Vijayawada (93%)</li>
+        <li>SSC – Indus High School, Kurnool (9.8/10)</li>
+      </ul>
+    </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Python Development Intern – CodeClause</li>
-      <li>Full Stack Web Development Bootcamp – Udemy</li>
-      <li>SQL – HackerRank</li>
-    </ul>
-  </section>
+    <section id="certifications" data-aos="fade-right">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Python Development Intern – CodeClause</li>
+        <li>Full Stack Web Development Bootcamp – Udemy</li>
+        <li>SQL – HackerRank</li>
+      </ul>
+    </section>
 
-  <section id="languages">
-    <h2>Languages</h2>
-    <ul>
-      <li>English (Fluent)</li>
-      <li>Telugu (Native)</li>
-      <li>Hindi (Conversational)</li>
-      <li>German (A1)</li>
-    </ul>
-  </section>
+    <section id="languages" data-aos="fade-left">
+      <h2>Languages</h2>
+      <ul>
+        <li>English (Fluent)</li>
+        <li>Telugu (Native)</li>
+        <li>Hindi (Conversational)</li>
+        <li>German (A1)</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:dsaiteja5706@gmail.com">dsaiteja5706@gmail.com</a></p>
-    <p>Phone: <a href="tel:+919346851180">+91 93468 51180</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/sai-teja-5706dst" target="_blank">linkedin.com/in/sai-teja-5706dst</a></p>
-  </section>
+    <section id="contact" data-aos="zoom-in">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:dsaiteja5706@gmail.com">dsaiteja5706@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919346851180">+91 93468 51180</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/sai-teja-5706dst" target="_blank">linkedin.com/in/sai-teja-5706dst</a></p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Dasari Saiteja. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
